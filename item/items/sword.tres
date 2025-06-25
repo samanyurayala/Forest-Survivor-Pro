@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://d1pmavcywlmi4"]
+
+[ext_resource type="Script" uid="uid://cr3tyo5jruu73" path="res://item/item_data.gd" id="1_l8un5"]
+[ext_resource type="Texture2D" uid="uid://bgb5rq3778pja" path="res://item/Icons-Pack1.png" id="2_82x0v"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qi6fs"]
+atlas = ExtResource("2_82x0v")
+region = Rect2(32, 96, 32, 32)
+
+[resource]
+script = ExtResource("1_l8un5")
+name = "Sword"
+description = "A weapon"
+stackable = false
+texture = SubResource("AtlasTexture_qi6fs")
+metadata/_custom_type_script = "uid://cr3tyo5jruu73"

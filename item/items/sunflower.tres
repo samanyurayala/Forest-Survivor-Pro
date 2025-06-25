@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://b7p2dqs74k035"]
+
+[ext_resource type="Script" uid="uid://cr3tyo5jruu73" path="res://item/item_data.gd" id="1_fxxvk"]
+[ext_resource type="Texture2D" uid="uid://bgb5rq3778pja" path="res://item/Icons-Pack1.png" id="2_sqnrr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sqnrr"]
+atlas = ExtResource("2_sqnrr")
+region = Rect2(352, 352, 32, 32)
+
+[resource]
+script = ExtResource("1_fxxvk")
+name = "Sunflower"
+description = "A sunflower"
+stackable = true
+texture = SubResource("AtlasTexture_sqnrr")
+metadata/_custom_type_script = "uid://cr3tyo5jruu73"

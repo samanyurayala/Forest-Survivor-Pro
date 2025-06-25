@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://v4rvs5sjbo0f"]
+[gd_scene load_steps=27 format=3 uid="uid://v4rvs5sjbo0f"]
 
 [ext_resource type="PackedScene" uid="uid://b1sjharhtvxbi" path="res://scenes/player.tscn" id="1_4xfga"]
 [ext_resource type="Script" uid="uid://btxkfhslxyd4c" path="res://scripts/map.gd" id="1_be0no"]
@@ -13,6 +13,12 @@
 [ext_resource type="PackedScene" uid="uid://cfjnhgdnrv4gt" path="res://assets/sleeping_bag.glb" id="11_mlgqr"]
 [ext_resource type="PackedScene" uid="uid://br8u4ogt5gjhd" path="res://scenes/lantern.tscn" id="12_wslke"]
 [ext_resource type="PackedScene" uid="uid://dxeqo4bmxh81r" path="res://scenes/campfire.tscn" id="13_gw3fx"]
+[ext_resource type="PackedScene" uid="uid://bre8o5b1x566x" path="res://inventory/inventory.tscn" id="14_n1psn"]
+[ext_resource type="Script" uid="uid://58gi54avebu5" path="res://inventory/inventory_interface.gd" id="15_p7tei"]
+[ext_resource type="PackedScene" uid="uid://dp3pxve62f15v" path="res://inventory/slot.tscn" id="17_c70he"]
+[ext_resource type="PackedScene" uid="uid://cvyw5g2hjkytd" path="res://item/pick_up/pick_up.tscn" id="17_mo32q"]
+[ext_resource type="Resource" uid="uid://b7p2dqs74k035" path="res://item/items/sunflower.tres" id="18_6k6j1"]
+[ext_resource type="Script" uid="uid://cfw1lb1xuh5ho" path="res://inventory/slot_data.gd" id="19_m335s"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0cso3"]
 albedo_texture = ExtResource("1_gldc4")
@@ -45,6 +51,12 @@ background_mode = 2
 sky = SubResource("Sky_blm8a")
 fog_light_color = Color(0.0827415, 0.0827414, 0.0827414, 1)
 fog_density = 0.1258
+
+[sub_resource type="Resource" id="Resource_sq6bu"]
+script = ExtResource("19_m335s")
+item_data = ExtResource("18_6k6j1")
+quantity = 3
+metadata/_custom_type_script = "uid://cfw1lb1xuh5ho"
 
 [node name="map" type="Node3D"]
 script = ExtResource("1_be0no")
@@ -89,3 +101,35 @@ omni_attenuation = 2.88
 
 [node name="campfire_game" parent="camp" instance=ExtResource("13_gw3fx")]
 transform = Transform3D(-1.31134e-07, 0, -3, 0, 3, 0, 3, 0, -1.31134e-07, -11.4408, 0.0874045, 8.24768)
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="InventoryInterface" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("15_p7tei")
+
+[node name="PlayerInventory" parent="UI/InventoryInterface" instance=ExtResource("14_n1psn")]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 52.0
+offset_bottom = 52.0
+
+[node name="GrabbedSlot" parent="UI/InventoryInterface" instance=ExtResource("17_c70he")]
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="PickUp" parent="." instance=ExtResource("17_mo32q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.61316, 0)
+slot_data = SubResource("Resource_sq6bu")
+
+[connection signal="drop_slot_data" from="UI/InventoryInterface" to="." method="_on_inventory_interface_drop_slot_data"]
+[connection signal="gui_input" from="UI/InventoryInterface" to="UI/InventoryInterface" method="_on_gui_input"]

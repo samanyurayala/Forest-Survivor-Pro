@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://dgae74uc1skh5"]
+
+[ext_resource type="Script" uid="uid://cr3tyo5jruu73" path="res://item/item_data.gd" id="1_6xqtc"]
+[ext_resource type="Texture2D" uid="uid://bgb5rq3778pja" path="res://item/Icons-Pack1.png" id="2_lk58u"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jydu2"]
+atlas = ExtResource("2_lk58u")
+region = Rect2(32, 128, 32, 32)
+
+[resource]
+script = ExtResource("1_6xqtc")
+name = "Axe"
+description = "A tool"
+stackable = false
+texture = SubResource("AtlasTexture_jydu2")
+metadata/_custom_type_script = "uid://cr3tyo5jruu73"

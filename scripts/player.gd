@@ -2,6 +2,8 @@ extends CharacterBody3D
 
 @onready var camera = $Camera3D
 
+@export var inventory_data: InventoryData
+
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 
@@ -31,3 +33,7 @@ func _physics_process(delta):
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
+
+func get_drop_position() -> Vector3:
+	var direction = -camera.global_transform.basis.z
+	return camera.global_position + direction
