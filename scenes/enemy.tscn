@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://ins8ugc3ou13"]
+
+[ext_resource type="Script" uid="uid://c42h5xc1ddhal" path="res://scenes/enemy.gd" id="1_7p1mj"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_7p1mj"]
+
+[node name="enemy" type="CharacterBody3D" groups=["enemy"]]
+script = ExtResource("1_7p1mj")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_7p1mj")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." groups=["enemy"]]
+path_height_offset = -1.0
