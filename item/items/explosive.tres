@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://dotmi1jgeh1w"]
+
+[ext_resource type="Script" uid="uid://cr3tyo5jruu73" path="res://item/item_data.gd" id="1_4ry3r"]
+[ext_resource type="Texture2D" uid="uid://bgb5rq3778pja" path="res://item/Icons-Pack1.png" id="2_11r7p"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yjewl"]
+atlas = ExtResource("2_11r7p")
+region = Rect2(32, 544, 32, 32)
+
+[resource]
+script = ExtResource("1_4ry3r")
+name = "Explosive"
+description = "Blows you up"
+stackable = false
+texture = SubResource("AtlasTexture_yjewl")
+metadata/_custom_type_script = "uid://cr3tyo5jruu73"

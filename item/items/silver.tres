@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://yow53kh3w6s8"]
+
+[ext_resource type="Script" uid="uid://cr3tyo5jruu73" path="res://item/item_data.gd" id="1_mt1q0"]
+[ext_resource type="Texture2D" uid="uid://bgb5rq3778pja" path="res://item/Icons-Pack1.png" id="2_rbpci"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ck440"]
+atlas = ExtResource("2_rbpci")
+region = Rect2(256, 480, 32, 32)
+
+[resource]
+script = ExtResource("1_mt1q0")
+name = "Silver"
+description = "A metal"
+stackable = true
+texture = SubResource("AtlasTexture_ck440")
+metadata/_custom_type_script = "uid://cr3tyo5jruu73"
