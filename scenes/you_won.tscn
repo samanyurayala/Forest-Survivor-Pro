@@ -1,0 +1,119 @@
+[gd_scene load_steps=5 format=3 uid="uid://gxklmhwbpg6a"]
+
+[ext_resource type="Script" uid="uid://cyrv7i3u42311" path="res://scripts/gameoveryouwon.gd" id="1_tio7n"]
+[ext_resource type="Texture2D" uid="uid://1t5yesrft2ys" path="res://assets/textures/menus/titlescreen.png" id="2_6bev4"]
+[ext_resource type="FontFile" uid="uid://tu8colook4pk" path="res://fonts/Tangerine-Bold.ttf" id="3_fufq8"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6d6rd"]
+texture = ExtResource("2_6bev4")
+
+[node name="YouWon" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tio7n")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_6d6rd")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -576.0
+offset_top = 20.0
+offset_right = 576.0
+offset_bottom = 180.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0.717647, 0, 1)
+theme_override_fonts/font = ExtResource("3_fufq8")
+theme_override_font_sizes/font_size = 150
+text = "You Won"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -576.0
+offset_top = 175.0
+offset_right = 576.0
+offset_bottom = 335.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0.717647, 0, 1)
+theme_override_fonts/font = ExtResource("3_fufq8")
+theme_override_font_sizes/font_size = 75
+text = "You completed all the tasks"
+horizontal_alignment = 1
+
+[node name="Home" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -78.5
+offset_top = 300.0
+offset_right = 78.5
+offset_bottom = 388.0
+grow_horizontal = 2
+theme_override_colors/font_disabled_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0.54902, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 0.6, 0, 1)
+theme_override_colors/icon_disabled_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/icon_hover_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/icon_pressed_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/icon_focus_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/icon_normal_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/font_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/font_focus_color = Color(1, 0.6, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.54902, 0, 1)
+theme_override_fonts/font = ExtResource("3_fufq8")
+theme_override_font_sizes/font_size = 80
+text = "Home"
+flat = true
+
+[node name="Quit" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -55.5
+offset_top = 400.0
+offset_right = 55.5
+offset_bottom = 488.0
+grow_horizontal = 2
+theme_override_colors/font_disabled_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0.54902, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 0.6, 0, 1)
+theme_override_colors/icon_disabled_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/icon_hover_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/icon_pressed_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/icon_focus_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/icon_normal_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/font_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/font_focus_color = Color(1, 0.6, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.54902, 0, 1)
+theme_override_fonts/font = ExtResource("3_fufq8")
+theme_override_font_sizes/font_size = 80
+text = "Quit"
+flat = true
+
+[connection signal="pressed" from="Home" to="." method="_on_home_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

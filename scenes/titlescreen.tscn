@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://didettg8w7pbc"]
 
 [ext_resource type="Texture2D" uid="uid://1t5yesrft2ys" path="res://assets/textures/menus/titlescreen.png" id="1_6d6rd"]
-[ext_resource type="Script" uid="uid://d0v6fygc1xptf" path="res://scenes/titlescreen.gd" id="1_tt55a"]
+[ext_resource type="Script" uid="uid://dnqe6vs2mjr2t" path="res://scripts/titlescreen.gd" id="1_t7v6v"]
 [ext_resource type="FontFile" uid="uid://tu8colook4pk" path="res://fonts/Tangerine-Bold.ttf" id="2_3jj3l"]
 [ext_resource type="Texture2D" uid="uid://bi0g87v3ur2xn" path="res://assets/old-paper-parchment-scroll-ancient-papyrus.png" id="4_t7v6v"]
 
@@ -15,7 +15,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_tt55a")
+script = ExtResource("1_t7v6v")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -163,4 +163,5 @@ texture = ExtResource("4_t7v6v")
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
-[connection signal="pressed" from="HowToPlay" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="HowToPlay" to="." method="_on_how_to_play_pressed"]
+[connection signal="pressed" from="Credits" to="." method="_on_credits_pressed"]
