@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bg5s1hhagkh21"
+path="res://.godot/imported/Night Time Forest Sound Silence Night Forest Sound NO COPYRIGHTS.mp3-7758268e88483916544f89b53f056afd.mp3str"
+
+[deps]
+
+source_file="res://sounds/Night Time Forest Sound Silence Night Forest Sound NO COPYRIGHTS.mp3"
+dest_files=["res://.godot/imported/Night Time Forest Sound Silence Night Forest Sound NO COPYRIGHTS.mp3-7758268e88483916544f89b53f056afd.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.5
+bpm=0
+beat_count=0
+bar_beats=4

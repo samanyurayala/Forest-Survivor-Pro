@@ -1,11 +1,11 @@
-[gd_scene load_steps=46 format=3 uid="uid://v4rvs5sjbo0f"]
+[gd_scene load_steps=47 format=3 uid="uid://v4rvs5sjbo0f"]
 
 [ext_resource type="PackedScene" uid="uid://b1sjharhtvxbi" path="res://scenes/player.tscn" id="1_4xfga"]
 [ext_resource type="Script" uid="uid://btxkfhslxyd4c" path="res://scripts/map.gd" id="1_be0no"]
 [ext_resource type="Texture2D" uid="uid://c1ltq2o3q3wjn" path="res://assets/textures/ground_textures/forrest_ground_01_diff_2k.png" id="1_gldc4"]
 [ext_resource type="Texture2D" uid="uid://cx5uhtphbtbo6" path="res://assets/textures/ground_textures/forrest_ground_01_ao_2k.png" id="2_nakos"]
-[ext_resource type="Texture2D" uid="uid://cygi0n77vfp0c" path="res://assets/textures/sky_textures/kloppenheim_06_puresky_4k.exr" id="2_paxxb"]
 [ext_resource type="Texture2D" uid="uid://dx8ui6oqxeq6v" path="res://assets/textures/ground_textures/forrest_ground_01_disp_2k.png" id="3_jh32y"]
+[ext_resource type="Texture2D" uid="uid://b6vswbg8v154f" path="res://assets/textures/sky_textures/beautiful-shining-stars-night-sky.jpg" id="3_lhdcv"]
 [ext_resource type="Texture2D" uid="uid://cpqrv44pywoue" path="res://assets/textures/ground_textures/forrest_ground_01_nor_gl_2k.png" id="4_be0no"]
 [ext_resource type="Texture2D" uid="uid://5v56gg16ma4x" path="res://assets/textures/ground_textures/forrest_ground_01_rough_2k.png" id="5_blm8a"]
 [ext_resource type="MeshLibrary" uid="uid://bfmv45p578du1" path="res://meshes/pinetree.tres" id="9_be0no"]
@@ -35,9 +35,11 @@
 [ext_resource type="Resource" uid="uid://tpl2jxmthee7" path="res://item/items/dynamite.tres" id="32_mniao"]
 [ext_resource type="Texture2D" uid="uid://dn20gb4phhhq" path="res://assets/arrow.png" id="33_yfm5w"]
 [ext_resource type="Script" uid="uid://7u8266k27f1f" path="res://scripts/arrow.gd" id="34_081xv"]
+[ext_resource type="AudioStream" uid="uid://bg5s1hhagkh21" path="res://sounds/Night Time Forest Sound Silence Night Forest Sound NO COPYRIGHTS.mp3" id="36_lhdcv"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_be0no"]
-panorama = ExtResource("2_paxxb")
+panorama = ExtResource("3_lhdcv")
+energy_multiplier = 2.5
 
 [sub_resource type="Sky" id="Sky_blm8a"]
 sky_material = SubResource("PanoramaSkyMaterial_be0no")
@@ -47,6 +49,7 @@ background_mode = 2
 sky = SubResource("Sky_blm8a")
 fog_light_color = Color(0.0827415, 0.0827414, 0.0827414, 1)
 fog_density = 0.001
+volumetric_fog_enabled = true
 volumetric_fog_density = 0.04
 volumetric_fog_albedo = Color(0, 0, 0, 1)
 
@@ -233,7 +236,7 @@ skeleton = NodePath("../..")
 shape = SubResource("ConcavePolygonShape3D_be0no")
 
 [node name="enemy" parent="." instance=ExtResource("21_sq6bu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.78246, 1, 21.7286)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -87.9305, 1, 21.7286)
 
 [node name="walls" type="GridMap" parent="."]
 mesh_library = ExtResource("25_5u2yt")
@@ -249,11 +252,11 @@ transform = Transform3D(0.007, 0, 0, 0, -3.0598e-10, 0.007, 0, -0.007, -3.0598e-
 transform = Transform3D(0.01, 0, 0, 0, -4.37114e-10, -0.01, 0, 0.01, -4.37114e-10, 14.0214, -1.90735e-06, 83.5176)
 
 [node name="Silver" parent="." instance=ExtResource("17_mo32q")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -134.359, 0.320001, 14.8343)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -114.694, 0.320001, -62.7826)
 slot_data = SubResource("Resource_mniao")
 
-[node name="PickUp" parent="." instance=ExtResource("17_mo32q")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.14929, 0.32, -1.78183)
+[node name="Dynamite" parent="." instance=ExtResource("17_mo32q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.14929, 0.32, -71.3126)
 slot_data = SubResource("Resource_yfm5w")
 
 [node name="arrow" type="Sprite3D" parent="."]
@@ -269,6 +272,11 @@ one_shot = true
 [node name="Timer2" type="Timer" parent="."]
 wait_time = 500.0
 one_shot = true
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("36_lhdcv")
+volume_db = -1.0
+autoplay = true
 
 [connection signal="drop_slot_data" from="UI/InventoryInterface" to="." method="_on_inventory_interface_drop_slot_data"]
 [connection signal="gui_input" from="UI/InventoryInterface" to="UI/InventoryInterface" method="_on_gui_input"]

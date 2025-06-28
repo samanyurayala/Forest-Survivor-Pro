@@ -2,7 +2,7 @@ extends CharacterBody3D
 
 @onready var nav_agent = $NavigationAgent3D
 
-const SPEED = 2.5
+const SPEED = 3.0
 
 func _physics_process(delta):
 	var next_location = nav_agent.get_next_path_position()
@@ -14,3 +14,7 @@ func _physics_process(delta):
 
 func update_target_position(target):
 	nav_agent.set_target_position(target)
+
+
+func _on_area_3d_body_entered(body):
+	get_tree().change_scene_to_file("res://scenes/gameover_enemy.tscn")

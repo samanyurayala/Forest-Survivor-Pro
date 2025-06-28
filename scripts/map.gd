@@ -6,6 +6,7 @@ const PickUp = preload("res://item/pick_up/pick_up.tscn")
 @onready var inventory_interface = $UI/InventoryInterface
 @onready var select = $UI/select
 @onready var player_inventory = $UI/InventoryInterface/PlayerInventory
+@onready var enemy = $enemy
 
 func _ready() -> void:
 	inventory_interface.set_player_inventory_data(player.inventory_data)
@@ -19,6 +20,7 @@ func _on_inventory_interface_drop_slot_data(slot_data):
 	
 func _physics_process(delta):
 	get_tree().call_group("enemy", "update_target_position", player.global_transform.origin)
+	enemy.look_at(player.position)
 	#print(player.global_transform.origin)
 	
 func _input(event):
