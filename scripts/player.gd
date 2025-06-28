@@ -1,6 +1,7 @@
 extends CharacterBody3D
 
 @onready var camera = $Camera3D
+@onready var footsteps = $AudioStreamPlayer3D
 
 @export var inventory_data: InventoryData
 
@@ -29,6 +30,7 @@ func _physics_process(delta):
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
 	else:
+		footsteps.play()
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 

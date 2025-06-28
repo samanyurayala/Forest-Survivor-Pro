@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://didettg8w7pbc"]
+[gd_scene load_steps=7 format=3 uid="uid://didettg8w7pbc"]
 
 [ext_resource type="Texture2D" uid="uid://1t5yesrft2ys" path="res://assets/textures/menus/titlescreen.png" id="1_6d6rd"]
 [ext_resource type="Script" uid="uid://dnqe6vs2mjr2t" path="res://scripts/titlescreen.gd" id="1_t7v6v"]
 [ext_resource type="FontFile" uid="uid://tu8colook4pk" path="res://fonts/Tangerine-Bold.ttf" id="2_3jj3l"]
 [ext_resource type="Texture2D" uid="uid://bi0g87v3ur2xn" path="res://assets/old-paper-parchment-scroll-ancient-papyrus.png" id="4_t7v6v"]
+[ext_resource type="FontFile" uid="uid://bnf3fxg1d5vca" path="res://fonts/DMSans_18pt-Bold.ttf" id="5_vhbaf"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6d6rd"]
 texture = ExtResource("1_6d6rd")
@@ -155,11 +156,107 @@ theme_override_font_sizes/font_size = 40
 text = "Credits"
 flat = true
 
-[node name="Old-paper-parchment-scroll-ancient-papyrus" type="Sprite2D" parent="."]
+[node name="PlayInstructionsCredits" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(576, 324)
 scale = Vector2(0.576, 0.637795)
 texture = ExtResource("4_t7v6v")
+
+[node name="HowToPlayTitle" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -576.0
+offset_top = 177.0
+offset_right = 576.0
+offset_bottom = 337.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0.717647, 0, 1)
+theme_override_fonts/font = ExtResource("2_3jj3l")
+theme_override_font_sizes/font_size = 90
+text = "How To Play - (Esc) to close"
+horizontal_alignment = 1
+
+[node name="CreditsTitle" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -576.0
+offset_top = 161.0
+offset_right = 576.0
+offset_bottom = 321.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0.717647, 0, 1)
+theme_override_fonts/font = ExtResource("2_3jj3l")
+theme_override_font_sizes/font_size = 100
+text = "Credits - (Esc) to close"
+horizontal_alignment = 1
+
+[node name="Instructions" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -576.0
+offset_top = 272.0
+offset_right = 576.0
+offset_bottom = 432.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0.717647, 0, 1)
+theme_override_fonts/font = ExtResource("2_3jj3l")
+theme_override_font_sizes/font_size = 50
+text = "Complete all 5 tasks to win the game
+The current task will be shown on the top right corner
+Once you complete a task, the next task will be shown
+immediately, so pay attention"
+horizontal_alignment = 1
+
+[node name="CreditsTo" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -848.5
+offset_top = -74.0
+offset_right = 848.5
+offset_bottom = 157.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0.717647, 0, 1)
+theme_override_fonts/font = ExtResource("5_vhbaf")
+theme_override_font_sizes/font_size = 7
+text = "Made with Godot 4.4.1
+\"Realistic Pine Tree 6 Free\" (https://skfb.ly/pwnNY) by Next Spring is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+\"tent\" (https://skfb.ly/6WStS) by Joe is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+\"Sleeping bag\" (https://skfb.ly/6xZyn) by Tactical_Beard is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+\"Old Rusty Lantern\" (https://skfb.ly/6RA8P) by lhaegy.fu is licensed under Creative Commons Attribution-NonCommercial (http://creativecommons.org/licenses/by-nc/4.0/).
+\"Campfire FBX\" (https://skfb.ly/ozFnD) by BartVanHoye is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+\"FishSoup_Pot\" (https://skfb.ly/6CK6C) by Vie Dinh is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+Icon Packs: https://sloppyjoestudios.itch.io/icons-pack-1
+Scroll Texture: https://www.freepik.com/free-vector/old-paper-parchment-scroll-ancient-papyrus_39709559.htm#fromView=keyword&page=1&position=3&uuid=9ca277d5-3cdb-46c9-a92b-93db8cac3f83&query=Old+Paper+Scroll+Texture
+Wall Texture: https://www.poliigon.com/texture/ledger-stone-wall-texture-mixed-gray/7000 
+\"Rusty Motorbike\" (https://skfb.ly/6WMDz) by cansuaydin is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+Ground Texture: https://polyhaven.com/a/forrest_ground_01 
+\"Wagon\" (https://skfb.ly/6qSLY) by FlukierJupiter is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+Sky Texture: https://www.freepik.com/free-photo/beautiful-shining-stars-night-sky_7631083.htm#fromView=keyword&page=1&position=0&uuid=c206bc56-ad35-4ef5-9d61-e0f80998ecb9&query=Night+Sky+8k 
+Forest Background Sounds: https://www.youtube.com/@ThaileeEntertainment (https://www.youtube.com/watch?v=ygcx6w9Nfi0 )
+Footstep Sounds: https://www.youtube.com/@soundperfect3325 (https://www.youtube.com/watch?v=6H0SoHxVJFM )
+Fonts: Tangerine (https://fonts.google.com/specimen/Tangerine ) and DM Sans (https://fonts.google.com/specimen/DM+Sans )
+Blender (https://www.blender.org/ )
+Helpful Youtubers: DevLogLogan (https://www.youtube.com/@DevLogLogan ) and Gwizz (https://www.youtube.com/@Gwizz1027 )"
+horizontal_alignment = 1
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://b1sjharhtvxbi"]
+[gd_scene load_steps=6 format=3 uid="uid://b1sjharhtvxbi"]
 
 [ext_resource type="Script" uid="uid://6w4tm2yku1db" path="res://scripts/player.gd" id="1_3vyb7"]
 [ext_resource type="Resource" uid="uid://ccktk2g0ptapb" path="res://test_inv.tres" id="2_g2els"]
+[ext_resource type="AudioStream" uid="uid://cjwlv2ckcm778" path="res://sounds/footsteps.mp3" id="3_qhqgy"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_u8vuu"]
 
@@ -20,3 +21,6 @@ mesh = SubResource("CapsuleMesh_3vyb7")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.736836, 0)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_qhqgy")
