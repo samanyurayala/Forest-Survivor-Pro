@@ -2,7 +2,7 @@ extends CharacterBody3D
 
 @onready var nav_agent = $NavigationAgent3D
 
-const SPEED = 2.0
+const SPEED = 3.0
 
 func _physics_process(delta):
 	var next_location = nav_agent.get_next_path_position()

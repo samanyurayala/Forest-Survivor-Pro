@@ -1,0 +1,166 @@
+[gd_scene load_steps=6 format=3 uid="uid://didettg8w7pbc"]
+
+[ext_resource type="Texture2D" uid="uid://1t5yesrft2ys" path="res://assets/textures/menus/titlescreen.png" id="1_6d6rd"]
+[ext_resource type="Script" uid="uid://d0v6fygc1xptf" path="res://scenes/titlescreen.gd" id="1_tt55a"]
+[ext_resource type="FontFile" uid="uid://tu8colook4pk" path="res://fonts/Tangerine-Bold.ttf" id="2_3jj3l"]
+[ext_resource type="Texture2D" uid="uid://bi0g87v3ur2xn" path="res://assets/old-paper-parchment-scroll-ancient-papyrus.png" id="4_t7v6v"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6d6rd"]
+texture = ExtResource("1_6d6rd")
+
+[node name="TitleScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tt55a")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_6d6rd")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -576.0
+offset_top = 20.0
+offset_right = 576.0
+offset_bottom = 180.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0.717647, 0, 1)
+theme_override_fonts/font = ExtResource("2_3jj3l")
+theme_override_font_sizes/font_size = 150
+text = "Forest Survivor Pro"
+horizontal_alignment = 1
+
+[node name="Play" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -68.5
+offset_top = 225.0
+offset_right = 68.5
+offset_bottom = 313.0
+grow_horizontal = 2
+theme_override_colors/font_disabled_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0.54902, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 0.6, 0, 1)
+theme_override_colors/icon_disabled_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/icon_hover_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/icon_pressed_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/icon_focus_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/icon_normal_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/font_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/font_focus_color = Color(1, 0.6, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.54902, 0, 1)
+theme_override_fonts/font = ExtResource("2_3jj3l")
+theme_override_font_sizes/font_size = 80
+text = "Play"
+flat = true
+
+[node name="Quit" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -55.5
+offset_top = 350.0
+offset_right = 55.5
+offset_bottom = 438.0
+grow_horizontal = 2
+theme_override_colors/font_disabled_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0.54902, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 0.6, 0, 1)
+theme_override_colors/icon_disabled_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/icon_hover_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/icon_pressed_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/icon_focus_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/icon_normal_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/font_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/font_focus_color = Color(1, 0.6, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.54902, 0, 1)
+theme_override_fonts/font = ExtResource("2_3jj3l")
+theme_override_font_sizes/font_size = 80
+text = "Quit"
+flat = true
+
+[node name="HowToPlay" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -90.5
+offset_top = 475.0
+offset_right = 90.5
+offset_bottom = 523.0
+grow_horizontal = 2
+theme_override_colors/font_disabled_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0.54902, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 0.6, 0, 1)
+theme_override_colors/icon_disabled_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/icon_hover_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/icon_pressed_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/icon_focus_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/icon_normal_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/font_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/font_focus_color = Color(1, 0.6, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.54902, 0, 1)
+theme_override_fonts/font = ExtResource("2_3jj3l")
+theme_override_font_sizes/font_size = 40
+text = "How To Play"
+flat = true
+
+[node name="Credits" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -42.0
+offset_top = 550.0
+offset_right = 42.0
+offset_bottom = 598.0
+grow_horizontal = 2
+theme_override_colors/font_disabled_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0.54902, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 0.6, 0, 1)
+theme_override_colors/icon_disabled_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/icon_hover_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/icon_pressed_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/icon_focus_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/icon_normal_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/font_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/font_focus_color = Color(1, 0.6, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.54902, 0, 1)
+theme_override_fonts/font = ExtResource("2_3jj3l")
+theme_override_font_sizes/font_size = 40
+text = "Credits"
+flat = true
+
+[node name="Old-paper-parchment-scroll-ancient-papyrus" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(576, 324)
+scale = Vector2(0.576, 0.637795)
+texture = ExtResource("4_t7v6v")
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="HowToPlay" to="." method="_on_play_pressed"]
