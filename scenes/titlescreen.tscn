@@ -212,11 +212,12 @@ grow_horizontal = 2
 theme_override_colors/font_color = Color(1, 0.717647, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 0.717647, 0, 1)
 theme_override_fonts/font = ExtResource("2_3jj3l")
-theme_override_font_sizes/font_size = 50
+theme_override_font_sizes/font_size = 40
 text = "Complete all 5 tasks to win the game
 The current task will be shown on the top right corner
 Once you complete a task, the next task will be shown
-immediately, so pay attention"
+immediately, so pay attention
+You are not able to pause or save"
 horizontal_alignment = 1
 
 [node name="CreditsTo" type="Label" parent="."]
@@ -255,6 +256,7 @@ Forest Background Sounds: https://www.youtube.com/@ThaileeEntertainment (https:/
 Footstep Sounds: https://www.youtube.com/@soundperfect3325 (https://www.youtube.com/watch?v=6H0SoHxVJFM )
 Fonts: Tangerine (https://fonts.google.com/specimen/Tangerine ) and DM Sans (https://fonts.google.com/specimen/DM+Sans )
 Blender (https://www.blender.org/ )
+Photopea (https://www.photopea.com/ )
 Helpful Youtubers: DevLogLogan (https://www.youtube.com/@DevLogLogan ) and Gwizz (https://www.youtube.com/@Gwizz1027 )"
 horizontal_alignment = 1
 

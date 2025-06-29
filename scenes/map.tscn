@@ -238,6 +238,9 @@ shape = SubResource("ConcavePolygonShape3D_be0no")
 [node name="enemy" parent="." instance=ExtResource("21_sq6bu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -87.9305, 1, 21.7286)
 
+[node name="enemy2" parent="." instance=ExtResource("21_sq6bu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -87.9305, 1, -133.207)
+
 [node name="walls" type="GridMap" parent="."]
 mesh_library = ExtResource("25_5u2yt")
 data = {
