@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bn5h72froph0n"
 path.s3tc="res://.godot/imported/old_rusty_lantern_0.jpg-bfdbaf27faf6dd2f7f5110dc3397d90a.s3tc.ctex"
+path.etc2="res://.godot/imported/old_rusty_lantern_0.jpg-bfdbaf27faf6dd2f7f5110dc3397d90a.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/models/old_rusty_lantern_0.jpg"
-dest_files=["res://.godot/imported/old_rusty_lantern_0.jpg-bfdbaf27faf6dd2f7f5110dc3397d90a.s3tc.ctex"]
+dest_files=["res://.godot/imported/old_rusty_lantern_0.jpg-bfdbaf27faf6dd2f7f5110dc3397d90a.s3tc.ctex", "res://.godot/imported/old_rusty_lantern_0.jpg-bfdbaf27faf6dd2f7f5110dc3397d90a.etc2.ctex"]
 
 [params]
 

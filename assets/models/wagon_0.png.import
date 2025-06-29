@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ba5cl21yfi722"
 path.s3tc="res://.godot/imported/wagon_0.png-c3fb659386c8bdb5e1b75c84cc81e978.s3tc.ctex"
+path.etc2="res://.godot/imported/wagon_0.png-c3fb659386c8bdb5e1b75c84cc81e978.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/models/wagon_0.png"
-dest_files=["res://.godot/imported/wagon_0.png-c3fb659386c8bdb5e1b75c84cc81e978.s3tc.ctex"]
+dest_files=["res://.godot/imported/wagon_0.png-c3fb659386c8bdb5e1b75c84cc81e978.s3tc.ctex", "res://.godot/imported/wagon_0.png-c3fb659386c8bdb5e1b75c84cc81e978.etc2.ctex"]
 
 [params]
 

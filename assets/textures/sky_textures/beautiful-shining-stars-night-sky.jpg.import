@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b6vswbg8v154f"
 path.s3tc="res://.godot/imported/beautiful-shining-stars-night-sky.jpg-0524e40b62446e0dc02fb3fae2c2d32d.s3tc.ctex"
+path.etc2="res://.godot/imported/beautiful-shining-stars-night-sky.jpg-0524e40b62446e0dc02fb3fae2c2d32d.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/textures/sky_textures/beautiful-shining-stars-night-sky.jpg"
-dest_files=["res://.godot/imported/beautiful-shining-stars-night-sky.jpg-0524e40b62446e0dc02fb3fae2c2d32d.s3tc.ctex"]
+dest_files=["res://.godot/imported/beautiful-shining-stars-night-sky.jpg-0524e40b62446e0dc02fb3fae2c2d32d.s3tc.ctex", "res://.godot/imported/beautiful-shining-stars-night-sky.jpg-0524e40b62446e0dc02fb3fae2c2d32d.etc2.ctex"]
 
 [params]
 

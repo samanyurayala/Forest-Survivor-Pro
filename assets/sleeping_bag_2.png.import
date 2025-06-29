@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cm6gw8po8tujg"
 path.s3tc="res://.godot/imported/sleeping_bag_2.png-d7413da84ed9ebe01a9b1829f8f2625b.s3tc.ctex"
+path.etc2="res://.godot/imported/sleeping_bag_2.png-d7413da84ed9ebe01a9b1829f8f2625b.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/sleeping_bag_2.png"
-dest_files=["res://.godot/imported/sleeping_bag_2.png-d7413da84ed9ebe01a9b1829f8f2625b.s3tc.ctex"]
+dest_files=["res://.godot/imported/sleeping_bag_2.png-d7413da84ed9ebe01a9b1829f8f2625b.s3tc.ctex", "res://.godot/imported/sleeping_bag_2.png-d7413da84ed9ebe01a9b1829f8f2625b.etc2.ctex"]
 
 [params]
 
